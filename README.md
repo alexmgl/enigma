@@ -44,8 +44,7 @@ ciphertext = machine.encode("HELLOWORLD")
 print(ciphertext)  # Example output: 'ILBDAAMTAZ'
 
 # Decode by encoding again (with reset)
-machine.reset()  # Reset rotors to initial positions
-plaintext = machine.encode(ciphertext)
+plaintext = machine.encode(ciphertext, reset=True)
 print(plaintext)  # Output: 'HELLOWORLD'
 ```
 
